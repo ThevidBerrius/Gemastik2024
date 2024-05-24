@@ -3,11 +3,11 @@
 }
 
 :root {
-  --primary-color: #f6f8fd;
-  --secondary-color: #dc3545;
-  --color-text: #231942;
-  --navbar-color: #ffffff;
-  --navbar-color-text: #000000;
+  --primary-color: #fafafa;         /* Off white */
+  --secondary-color: #28a745;       /* Accent color (green) */
+  --text-color: #231942;            /* Main text color */
+  --navbar-color: #ffffff;          /* Navbar background */
+  --navbar-text-color: #231942;     /* Navbar text color (dark blue) */
 }
 
 /* Style NavBar */
@@ -15,7 +15,7 @@
   position: fixed;
   padding: 15px 0 15px 0;
   width: 100%;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   z-index: 9999;
 
   animation-name: fadeInDown;
@@ -51,9 +51,9 @@
 
 /* Style Homepage Header*/
 header {
-  background: #d4efdf; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #c6e48b, #d4efdf, #a0d9c0); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #c6e48b, #d4efdf, #a0d9c0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #e8f5e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #b2fab4, #e8f5e9, #a5d6a7); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #b2fab4, #e8f5e9, #a5d6a7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .homepage .header-box h1{
@@ -245,103 +245,94 @@ header {
   }
 }
 
-/* Style Kelas */
-.kelas-page .kelas{
+/* Style job */
+.job-page .job{
   background-color: var(--primary-color);
   padding-bottom: 100px;
 }
 
-.kelas-page .kelas .row:nth-child(1){
+.job-page .job .row:nth-child(1){
   padding-top: 150px;
   padding-bottom: 100px;
 }
 
-.kelas-page .kelas .row:nth-child(1) h1{
+.job-page .job .row:nth-child(1) h1{
   color: var(--color-text);
   --animate-delay: 0.5s;
 }
 
 
-.kelas-page .kelas .row:nth-child(1) p{
+.job-page .job .row:nth-child(1) p{
   color: var(--color-text);
 }
 
-.kelas-page .kelas .row:nth-child(2){
+.job-page .job .row:nth-child(2){
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 15px;
   padding-inline: 10px;
 }
 
-.kelas-page .kelas .row:nth-child(2) .col{
+.job-page .job .row:nth-child(2) .col{
   background-color: #ffffff;
   padding: 0;
 }
 
-.kelas-page .kelas .row:nth-child(2) img{
+.job-page .job .row:nth-child(2) img{
   height: 250px;
 }
 
-.kelas-page .kelas .row:nth-child(2) .star i{
+.job-page .job .row:nth-child(2) .star i{
   color: gold;
 }
 
-.kelas-page .kelas .row:nth-child(2) h5{
+.job-page .job .row:nth-child(2) h5{
   color: var(--color-text);
   font-weight: bold;
   line-height: 1.5;
 }
 
-/* Style Testimonial */
-.testimonial-page .testimonial{
+/* Style category */
+.category-page .category{
   background-color: var(--primary-color);
-  padding-top: 150px;
-  padding-bottom: 50px;
-}
-
-.testimonial-page .testimonial .row:nth-child(1){
   padding-bottom: 100px;
 }
 
-.testimonial-page .testimonial .row:nth-child(1) h1{
+.category-page .category .row:nth-child(1){
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+
+.category-page .category .row:nth-child(1) h1{
   color: var(--color-text);
-  --animate-delay: 0.5s
+  --animate-delay: 0.5s;
 }
 
-.testimonial-page .testimonial .row:nth-child(1) p{
-  color: var(--color-text);
-}
 
-.testimonial-page .testimonial desc{
-  color: var(--color-text);
-  font-weight: 500;
-  line-height: 2;
-  margin-bottom: 50px;
-}
-
-.testimonial-page .testimonial .people{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  column-gap: 10px;
-}
-
-.testimonial-page .testimonial .people h5,
-.testimonial-page .testimonial .people p{
+.category-page .category .row:nth-child(1) p{
   color: var(--color-text);
 }
 
-.testimonial-page .testimonial .people h5{
-  font-weight: 600;
+.category-page .category .row:nth-child(2){
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding-inline: 10px;
 }
 
-.testimonial-page .testimonial .people p{
-  opacity: 50%;
+.category-page .category .row:nth-child(2) .col{
+  background-color: #ffffff;
+  padding: 0;
 }
 
-.testimonial-page .testimonial .people img{
-  width:  80px;
-  border-radius: 100%;
+.category-page .category .row:nth-child(2) img{
+  height: 250px;
+}
+
+.category-page .category .row:nth-child(2) h5{
+  color: var(--color-text);
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 /* Style Syarat & Ketentuan */
@@ -463,49 +454,6 @@ header {
   margin-top: 100px;
 }
 
-
-/* Event Page */
-.event-page .event{
-  background-color: var(--primary-color);
-  padding-bottom: 100px;
-}
-
-.event-page .event .row:nth-child(1){
-  padding-top: 150px;
-  padding-bottom: 100px;
-}
-
-.event-page .event .row:nth-child(1) h1{
-  color: var(--color-text);
-  --animate-delay: 0.5s;
-}
-
-
-.event-page .event .row:nth-child(1) p{
-  color: var(--color-text);
-}
-
-.event-page .event .row:nth-child(2){
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 15px;
-  padding-inline: 10px;
-}
-
-.event-page .event .row:nth-child(2) .col{
-  background-color: #ffffff;
-  padding: 0;
-}
-
-.event-page .event .row:nth-child(2) img{
-  height: 250px;
-}
-
-.event-page .event .row:nth-child(2) h5{
-  color: var(--color-text);
-  font-weight: bold;
-  line-height: 1.5;
-}
 
 /* Detail Page */
 .detail-page .detail {

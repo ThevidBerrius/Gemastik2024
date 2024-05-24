@@ -1,7 +1,7 @@
 import {Container, Row, Col} from "react-bootstrap";
 import HeroImage from '../assets/img/hero.png'
 
-import {GameTerbaru, dataSwiper} from "../data/index"
+import {kerjaanTerbaru, dataSwiper} from "../data/index"
 import {useNavigate} from "react-router-dom"
 import Faq from "../components/Faq";
 
@@ -22,10 +22,10 @@ const HomePage = () => {
         <Container>
           <Row className="header-box d-flex align-items-center pt-lg-5">
             <Col lg="6">
-              <h1 className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Temukan <br /> <span>Bakat Bermainmu</span> <br />Bersama Kami</h1>
-              <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Maksimalkan Potensimu, Raih Kemenanganmu: Temukan Pelatih, Teman Bermain, dan Info Event Terkini dengan MCO</p>
-              <button className="btn btn-danger btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s" onClick={() => navigate("/temanmabar")}>Cari Teman Mabar</button>
-              <button className="btn btn-outline-danger btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s" onClick={() => navigate("/coach")}>Cari Coach</button>
+              <h1 className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Dapatkan <br /> <span>Pekerjaan Impianmu </span> <br />dengan Bakat Terbaik</h1>
+              <p className="mb-4 animate__animated animate__fadeInUp animate__delay-1s">Cari Pekerjaan yang Bukan Sekadar Pekerjaan, Temukan Karier yang Membuatmu Bersemangat Setiap Hari dengan THEKERJA.COM</p>
+              <button className="btn btn-danger btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s" onClick={() => navigate("/category")}>Kategori Kerja</button>
+              <button className="btn btn-outline-danger btn-lg rounded-1 me-2 mb-xs-0 mb-2 animate__animated animate__fadeInUp animate__delay-1s" onClick={() => navigate("/jobs")}>Lihat Pekerjaan</button>
             </Col>
             <Col lg="6" className="pt-lg-0 pt-5">
               <img src={HeroImage} alt="hero-img" className="animate__animated animate__fadeInUp"/>
@@ -37,18 +37,26 @@ const HomePage = () => {
         <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold">Pilih Game</h1>
+              <h1 className="text-center fw-bold">Kerjaan Terbaru</h1>
               <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </Col>
           </Row>
           <Row>
-            {GameTerbaru.map((game) => {
+            {kerjaanTerbaru.map((kerja) => {
               return(
-                <Col key={game.id} className="shadow rounded" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={game.delay}>
-                  <img src={game.image} alt="unsplash.com" className="w-100 mb-5 rounded-top"/>
-                  <h5 className="mb-5 px-3">{game.title}</h5>
+                <Col key={kerja.id} className="shadow rounded" data-aos="fade-up" data-aos-duration="1000" data-aos-delay={kerja.delay}>
+                  <img src={kerja.image} alt="unsplash.com" className="w-100 mb-5 rounded-top"/>
+                  <div className="star mb-2 px-3">
+                    <i className={kerja.star1}></i>
+                    <i className={kerja.star2}></i>
+                    <i className={kerja.star3}></i>
+                    <i className={kerja.star4}></i>
+                    <i className={kerja.star5}></i>
+                  </div>
+                  <h5 className="mb-5 px-3">{kerja.title}</h5>
                   <div className="ket d-flex justify-content-between align-items-center px-3 pb-3">
-                    <button className="btn btn-danger rounded-1" onClick={() => navigate("/temanmabar")}>{game.buy}</button>
+                    <p className="m-0 text-primary fw-bold">{kerja.price}</p>
+                    <button className="btn btn-danger rounded-1" onClick={() => navigate("/detail")}>{kerja.buy}</button>
                   </div>
                 </Col>
               )
@@ -56,7 +64,7 @@ const HomePage = () => {
           </Row>
           <Row>
             <Col className="text-center">
-              <button className="btn btn-success rounded-5 btn-lg" data-aos="fade-up" data-aos-duration="1000" onClick={() => navigate("")}>Lihat Semua Game  <i className="fa-solid fa-chevron-right ms-1"></i> </button>
+              <button className="btn btn-success rounded-5 btn-lg" data-aos="fade-up" data-aos-duration="1000" onClick={() => navigate("/jobs")}>Lihat Semua Kerjaan  <i className="fa-solid fa-chevron-right ms-1"></i> </button>
             </Col>
           </Row>
         </Container>
