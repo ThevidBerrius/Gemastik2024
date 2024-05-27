@@ -8,7 +8,7 @@ const Footer = () => {
         <Row className="d-flex justify-content-between">
           <Col lg="5">
             <h3 className="fw-bold">THEKERJA.COM</h3>
-            <p className="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis rerum temporibus recusandae at voluptatibus. Atque libero numquam dolore accusantium necessitatibus.</p>
+            <p className="desc">Cari Pekerjaan yang Bukan Sekadar Pekerjaan, Temukan Karier yang Membuatmu Bersemangat Setiap Hari dengan THEKERJA.COM</p>
             <div className="no mb-1 mt-4">
               <Link className="text-decoration-none">
                 <i className="fa-brands fa-whatsapp"></i>

@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
-import {Navbar, Container, Nav} from 'react-bootstrap'
+import {Navbar, Container, Nav, NavbarToggle} from 'react-bootstrap'
 
 import {navLinks} from "../data/index"
 import { NavLink, useNavigate} from 'react-router-dom';
 
+
 const NavBar = () => {
   let navigate = useNavigate();
-
   const [changeColor, setChangeColor] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const changeBackgroundColor = ()=> {
-    if(window.scrollY > 10){
+    if(window.scrollY > 2){
       setChangeColor(true);
     }
     else{
@@ -19,7 +20,7 @@ const NavBar = () => {
   }
 
   useEffect(() => {
-    changeBackgroundColor();
+    //changeBackgroundColor();
     window.addEventListener("scroll", changeBackgroundColor);
   });
 

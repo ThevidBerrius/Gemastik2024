@@ -73,7 +73,7 @@ const HomePage = () => {
         <Container>
           <Row>
             <Col>
-              <h1 className="text-center fw-bold my-5">Testimonial</h1>
+              <h1 className="text-center fw-bold my-5">Our Partnership</h1>
             </Col>
           </Row>
           <Row>

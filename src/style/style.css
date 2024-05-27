@@ -10,6 +10,27 @@
   --navbar-text-color: #231942;     /* Navbar text color (dark blue) */
 }
 
+.navbar-toggler {
+  padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
+  font-size: var(--bs-navbar-toggler-font-size);
+  line-height: 1;
+  color: var(--bs-navbar-color);
+  background-color: transparent;
+  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
+  border-radius: var(--bs-navbar-toggler-border-radius);
+  transition: var(--bs-navbar-toggler-transition);
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: none;
+}
+
+.navbar-toggler:hover{
+  box-shadow: 0 0 0 var(--bs-navbar-toggler-focus-width);
+}
+
 /* Style NavBar */
 .navbar{
   position: fixed;
@@ -20,7 +41,9 @@
 
   animation-name: fadeInDown;
   animation-duration: 1s;
+  /* background-color: var(--navbar-color); */
 }
+
 
 .navbar.color-active{
   background-color: var(--navbar-color);
@@ -36,7 +59,8 @@
 }
 
 .navbar .nav-link a:hover{
-  color: var(--secondary-color)
+  color: var(--secondary-color);
+  
 }
 
 .navbar .nav-link .active{
@@ -46,6 +70,12 @@
 
 .navbar .nav-link .active:hover{
   color: var(--navbar-color);
+}
+
+@media screen and (max-width: 992px){
+  .navbar{
+    background-color: #fff;
+  }
 }
 
 
@@ -794,6 +824,3 @@ header {
     margin-bottom: 2vw;
   }
 }
-
-
-
